@@ -23,6 +23,9 @@ namespace calcutater_mvvm
         public MainWindow()
         {
             InitializeComponent();
+            DataContext = new ViewModel.CalcutaterModel();
         }
+
+        
     }
 }

@@ -5,8 +5,48 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:calcutater_mvvm"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="MainWindow" Height="200" Width="300">
+    <Window.Resources>
+        <Style x:Key="BlackAndWhite">
+            <Setter Property="Control.FontFamily" Value="Verdana" />
+            <Setter Property="Control.Background" Value="Black" />
+            <Setter Property="Control.Foreground" Value="White" />
+            <Setter Property="Control.Margin" Value="20" />
+        </Style>
+    </Window.Resources>
     <Grid>
-        
+        <Grid >
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <TextBlock Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="4" Margin="5" Background="{DynamicResource {x:Static SystemColors.ControlBrushKey}}" Text="{Binding Path=Number}" TextAlignment="Right" />
+            <Button Grid.Column="0" Grid.Row="1" Content="1" Command="{Binding NumberButton}" CommandParameter="1"/>
+            <Button Grid.Column="1" Grid.Row="1" Content="2" Command="{Binding NumberButton}" CommandParameter="2" />
+            <Button Grid.Column="2" Grid.Row="1" Content="3" Command="{Binding NumberButton}" CommandParameter="3"/>
+            <Button Grid.Column="0" Grid.Row="2" Content="4" Command="{Binding NumberButton}" CommandParameter="4"/>
+            <Button Grid.Column="1" Grid.Row="2" Content="5" Command="{Binding NumberButton}" CommandParameter="5"/>
+            <Button Grid.Column="2" Grid.Row="2" Content="6" Command="{Binding NumberButton}" CommandParameter="6"/>
+            <Button Grid.Column="0" Grid.Row="3" Content="7" Command="{Binding NumberButton}" CommandParameter="7"/>
+            <Button Grid.Column="1" Grid.Row="3" Content="8" Command="{Binding NumberButton}" CommandParameter="8"/>
+            <Button Grid.Column="2" Grid.Row="3" Content="9" Command="{Binding NumberButton}" CommandParameter="9"/>
+            <Button Grid.Column="2" Grid.Row="4" Content="0" Command="{Binding NumberButton}" CommandParameter="0"/>
+            <Button Grid.Column="3" Grid.Row="4" Content="="/>
+            <Button Grid.Column="1" Grid.Row="4" Content=","/>
+            <Button Grid.Column="4" Grid.Row="3" Content="+"/>
+            <Button Grid.Column="4" Grid.Row="2" Content="-"/>
+            <Button Grid.Column="4" Grid.Row="1" Content="C" Command="{Binding Press_с}"/>
+            <Button Grid.Column="0" Grid.Row="4" Content="←"/>
+        </Grid>
+
     </Grid>
 </Window>
